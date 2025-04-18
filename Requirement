@@ -1,0 +1,123 @@
+📄 Product Requirements Document (PRD) – Web App
+1. Overview
+We are building a web application using React (Frontend) and Spring Boot (Backend) to support:
+
+Login and Signup using mobile number (OTP) and Gmail (Google OAuth2)
+
+Payment integration (e.g., Razorpay, Stripe, or Paytm)
+
+Google Ads integration to generate ad revenue
+
+2. Features
+2.1 Authentication
+Mobile Number Login/Signup
+
+Send OTP
+
+Verify OTP
+
+Create/Update user profile
+
+Gmail Login (Google OAuth2)
+
+Google Sign-in with OAuth2
+
+Store Gmail ID and token in backend
+
+2.2 Payment Integration
+Display pricing plans or one-time product purchase
+
+Payment gateway integration (Razorpay/Stripe/Paytm)
+
+Handle success/failure callbacks
+
+Store payment history in backend
+
+2.3 Google Ads
+Show banner ads on selected pages
+
+Show interstitial ads optionally
+
+3. Tech Stack
+Frontend: React.js (Vite)
+
+Backend: Spring Boot (Java)
+
+Database: PostgreSQL
+
+Payment Gateway: Razorpay
+
+Authentication: Firebase Auth for mobile OTP keep custome we can add any other also
+
+Google OAuth: Google Sign-In API
+
+Ads: Google AdSense (web)
+
+4. UI Screens (Web)
+
+Screen	Description
+Landing Page	Intro, CTA for Login
+Login / Signup	Mobile Number input, Gmail login button
+OTP Verification	Enter OTP, resend OTP
+Dashboard	Personalized content, ads
+Pricing Page	Available plans/products
+Payment Page	Checkout via Razorpay/Stripe
+Success / Failure Page	Post payment result
+Settings / Profile	View user info, logout
+
+✅ Task List
+🔐 Authentication
+Set up Firebase for mobile OTP login
+
+Create LoginPage with options:
+
+Mobile number input → OTP form
+
+Google Sign-In button
+
+Integrate Firebase OTP logic
+
+Handle Google OAuth using Google API JS SDK
+
+💳 Payment Integration
+Setup Razorpay or Stripe Checkout
+
+Create PricingPage with payment button
+
+Call payment gateway API
+
+Handle success/failure using webhook or redirect page
+
+Store payment history in backend (API call)
+
+📊 Ads Integration
+Sign up for Google AdSense
+
+Add AdBanner component
+
+Embed AdSense 
+
+Place ad banner on Dashboard and PricingPage
+
+🧩 General
+Set up routing using react-router-dom
+
+Create protected routes (post-login)
+
+Create UserContext to manage logged-in state
+
+API services using Axios for backend calls
+
+Store JWT (if used) in localStorage or sessionStorage
+
+6. API Endpoints (Spring Boot)
+(You don’t need code now, just planning APIs)
+
+
+Endpoint	Method	Description
+/auth/mobile/send-otp	POST	Send OTP
+/auth/mobile/verify-otp	POST	Verify OTP
+/auth/google	POST	Google login
+/payments/initiate	POST	Start payment
+/payments/callback	POST	Payment success
+/user/profile	GET	Get user profile
