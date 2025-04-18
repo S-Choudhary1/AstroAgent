@@ -6,7 +6,6 @@ import {
   TextField,
   Typography,
   Paper,
-  Grid,
   Divider,
   Alert,
   Tooltip,
@@ -21,7 +20,7 @@ const Login: React.FC = () => {
   const [error, setError] = useState('');
   const [isLoading, setIsLoading] = useState(false);
   const [loginMethod, setLoginMethod] = useState<'phone' | 'email'>('email');
-  const { signInWithPhone, signInWithGoogle, signInWithEmail } = useAuth();
+  const { signInWithGoogle, signInWithEmail } = useAuth();
   const navigate = useNavigate();
 
   const handlePhoneLogin = async (e: React.FormEvent) => {

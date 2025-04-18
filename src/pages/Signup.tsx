@@ -6,7 +6,6 @@ import {
   TextField,
   Typography,
   Paper,
-  Grid,
   Divider,
   Alert,
   Tooltip,
@@ -21,7 +20,7 @@ const Signup: React.FC = () => {
   const [error, setError] = useState('');
   const [isLoading, setIsLoading] = useState(false);
   const [signupMethod, setSignupMethod] = useState<'phone' | 'email'>('email');
-  const { signInWithPhone, signInWithGoogle, signUpWithEmail } = useAuth();
+  const { signInWithGoogle, signUpWithEmail } = useAuth();
   const navigate = useNavigate();
 
   const handlePhoneSignup = async (e: React.FormEvent) => {
