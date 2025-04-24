@@ -47,7 +47,7 @@ const Payment = () => {
       price: 2999,
       icon: <Visibility />,
       features: [
-        'Complete Astrological Profile',
+        'Complete Astrological Profile ',
         'Daily Personalized Readings',
         'Live Consultation Sessions',
         'Relationship & Career Roadmap',
