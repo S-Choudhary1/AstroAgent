@@ -32,10 +32,10 @@ const Dashboard = () => {
   };
 
   const zodiacSigns = [
-    { name: 'Daily Horoscope', icon: <SunIcon />, description: 'Your personalized daily guidance' },
-    { name: 'Moon Phase', icon: <MoonIcon />, description: 'Current lunar influence' },
-    { name: 'Planetary Positions', icon: <EarthIcon />, description: 'Current celestial alignments' },
-    { name: 'Star Charts', icon: <StarsIcon />, description: 'Your personal star map' },
+    { name: 'Daily Horoscope', icon: <SunIcon />, description: 'Your personalized daily guidance', path: '/daily-horoscope' },
+    { name: 'Moon Phase', icon: <MoonIcon />, description: 'Current lunar influence', path: '/moon-phase' },
+    { name: 'Planetary Positions', icon: <EarthIcon />, description: 'Current celestial alignments', path: '/planetary-positions' },
+    { name: 'Star Charts', icon: <StarsIcon />, description: 'Your personal star map', path: '/star-charts' },
   ];
 
   return (
@@ -147,6 +147,7 @@ const Dashboard = () => {
                 </Typography>
                 <Button
                   variant="outlined"
+                  onClick={() => navigate(sign.path)}
                   sx={{
                     mt: 2,
                     borderColor: 'rgba(255, 255, 255, 0.2)',
