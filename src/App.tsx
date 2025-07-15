@@ -7,6 +7,10 @@ import Signup from './pages/Signup';
 import Dashboard from './pages/Dashboard';
 import Payment from './pages/Payment';
 import Home from './pages/Home';
+import DailyHoroscope from './pages/DailyHoroscope';
+import MoonPhase from './pages/MoonPhase';
+import PlanetaryPositions from './pages/PlanetaryPositions';
+import StarCharts from './pages/StarCharts';
 import { AuthProvider, useAuth } from './context/AuthContext';
 import StarryBackground from './components/StarryBackground';
 
@@ -75,6 +79,38 @@ const App = () => {
               element={
                 <PrivateRoute>
                   <Payment />
+                </PrivateRoute>
+              }
+            />
+            <Route
+              path="/daily-horoscope"
+              element={
+                <PrivateRoute>
+                  <DailyHoroscope />
+                </PrivateRoute>
+              }
+            />
+            <Route
+              path="/moon-phase"
+              element={
+                <PrivateRoute>
+                  <MoonPhase />
+                </PrivateRoute>
+              }
+            />
+            <Route
+              path="/planetary-positions"
+              element={
+                <PrivateRoute>
+                  <PlanetaryPositions />
+                </PrivateRoute>
+              }
+            />
+            <Route
+              path="/star-charts"
+              element={
+                <PrivateRoute>
+                  <StarCharts />
                 </PrivateRoute>
               }
             />
