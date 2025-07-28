@@ -12,6 +12,7 @@ import {
 } from '@mui/material';
 import { useAuth } from '../context/AuthContext';
 import { useNavigate } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 
 const Login: React.FC = () => {
   const [phoneNumber, setPhoneNumber] = useState('');
@@ -22,10 +23,11 @@ const Login: React.FC = () => {
   const [loginMethod, setLoginMethod] = useState<'phone' | 'email'>('email');
   const { signInWithGoogle, signInWithEmail } = useAuth();
   const navigate = useNavigate();
+  const { t } = useTranslation();
 
   const handlePhoneLogin = async (e: React.FormEvent) => {
     e.preventDefault();
-    setError('This feature is temporarily unavailable.');
+    setError(t('auth.phoneLoginDisabled'));
   };
 
   const handleEmailLogin = async (e: React.FormEvent) => {
@@ -59,7 +61,7 @@ const Login: React.FC = () => {
       <Box sx={{ mt: 8, mb: 4 }}>
         <Paper elevation={3} sx={{ p: 4 }}>
           <Typography variant="h4" component="h1" gutterBottom align="center">
-            Login
+            {t('auth.loginTitle')}
           </Typography>
 
           {error && (
@@ -69,7 +71,7 @@ const Login: React.FC = () => {
           )}
 
           <Box sx={{ display: 'flex', gap: 2, mb: 2 }}>
-            <Tooltip title="This feature is temporarily unavailable">
+            <Tooltip title={t('auth.phoneLoginDisabled')}>
               <span style={{ width: '100%' }}>
                 <Button
                   fullWidth
@@ -77,7 +79,7 @@ const Login: React.FC = () => {
                   onClick={() => setLoginMethod('phone')}
                 
                 >
-                  Phone
+                  {t('common.phone')}
                 </Button>
               </span>
             </Tooltip>
@@ -86,7 +88,7 @@ const Login: React.FC = () => {
               variant={loginMethod === 'email' ? 'contained' : 'outlined'}
               onClick={() => setLoginMethod('email')}
             >
-              Email
+              {t('common.email')}
             </Button>
           </Box>
 
@@ -94,7 +96,7 @@ const Login: React.FC = () => {
             <form onSubmit={handlePhoneLogin}>
               <TextField
                 fullWidth
-                label="Phone Number"
+                label={t('common.phoneNumber')}
                 variant="outlined"
                 value={phoneNumber}
                 onChange={(e) => setPhoneNumber(e.target.value)}
@@ -112,14 +114,14 @@ const Login: React.FC = () => {
                 disabled={true}
                 sx={{ mt: 2 }}
               >
-                Feature Temporarily Unavailable
+                {t('auth.featureUnavailable')}
               </Button>
             </form>
           ) : (
             <form onSubmit={handleEmailLogin}>
               <TextField
                 fullWidth
-                label="Email"
+                label={t('common.email')}
                 type="email"
                 variant="outlined"
                 value={email}
@@ -129,7 +131,7 @@ const Login: React.FC = () => {
               />
               <TextField
                 fullWidth
-                label="Password"
+                label={t('common.password')}
                 type="password"
                 variant="outlined"
                 value={password}
@@ -145,12 +147,12 @@ const Login: React.FC = () => {
                 disabled={isLoading}
                 sx={{ mt: 2 }}
               >
-                {isLoading ? 'Logging in...' : 'Login'}
+                {isLoading ? t('auth.loggingIn') : t('common.login')}
               </Button>
             </form>
           )}
 
-          <Divider sx={{ my: 3 }}>OR</Divider>
+          <Divider sx={{ my: 3 }}>{t('common.or')}</Divider>
 
           <Button
             fullWidth
@@ -170,17 +172,17 @@ const Login: React.FC = () => {
             }}
           >
             <img src="/google.svg" alt="Google" style={{ width: 20, height: 20 }} />
-            Login with Google
+            {t('auth.loginWithGoogle')}
           </Button>
 
           <Typography variant="body2" align="center">
-            Don't have an account?{' '}
+            {t('auth.dontHaveAccount')}{' '}
             <Button
               color="primary"
               onClick={() => navigate('/signup')}
               sx={{ textTransform: 'none' }}
             >
-              Sign Up
+              {t('common.signup')}
             </Button>
           </Typography>
         </Paper>

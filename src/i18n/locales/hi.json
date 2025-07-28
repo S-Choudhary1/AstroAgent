@@ -1,0 +1,133 @@
+{
+  "common": {
+    "loading": "लोड हो रहा है...",
+    "welcome": "स्वागत",
+    "login": "लॉगिन",
+    "signup": "साइन अप",
+    "logout": "लॉगआउट",
+    "signOut": "साइन आउट",
+    "email": "ईमेल",
+    "password": "पासवर्ड",
+    "phone": "फोन",
+    "phoneNumber": "फोन नंबर",
+    "error": "त्रुटि",
+    "success": "सफलता",
+    "cancel": "रद्द करें",
+    "save": "सहेजें",
+    "edit": "संपादित करें",
+    "delete": "हटाएं",
+    "submit": "जमा करें",
+    "back": "वापस",
+    "next": "अगला",
+    "previous": "पिछला",
+    "close": "बंद करें",
+    "search": "खोजें",
+    "filter": "फिल्टर",
+    "or": "या",
+    "and": "और"
+  },
+  "navigation": {
+    "dashboard": "डैशबोर्ड",
+    "profile": "प्रोफाइल",
+    "payments": "भुगतान",
+    "settings": "सेटिंग्स",
+    "home": "होम"
+  },
+  "auth": {
+    "loginTitle": "लॉगिन",
+    "signupTitle": "साइन अप",
+    "createAccount": "खाता बनाएं",
+    "loginWithGoogle": "गूगल से लॉगिन करें",
+    "signupWithGoogle": "गूगल से साइन अप करें",
+    "dontHaveAccount": "खाता नहीं है?",
+    "alreadyHaveAccount": "पहले से खाता है?",
+    "forgotPassword": "पासवर्ड भूल गए?",
+    "emailRequired": "ईमेल आवश्यक है",
+    "passwordRequired": "पासवर्ड आवश्यक है",
+    "phoneRequired": "फोन नंबर आवश्यक है",
+    "loggingIn": "लॉगिन हो रहा है...",
+    "signingUp": "साइन अप हो रहा है...",
+    "creatingAccount": "खाता बनाया जा रहा है...",
+    "featureUnavailable": "फीचर अस्थायी रूप से अनुपलब्ध",
+    "phoneLoginDisabled": "यह फीचर अस्थायी रूप से अनुपलब्ध है।",
+    "emailVerified": "ईमेल सत्यापित",
+    "passwordHelperText": "पासवर्ड कम से कम 6 अक्षर का होना चाहिए",
+    "yes": "हाँ",
+    "no": "नहीं"
+  },
+  "home": {
+    "welcomeBack": "वापसी पर स्वागत!",
+    "accountInformation": "खाता जानकारी",
+    "userID": "यूजर आईडी",
+    "emailVerified": "ईमेल सत्यापित",
+    "goToDashboard": "डैशबोर्ड पर जाएं"
+  },
+  "dashboard": {
+    "welcomeStargazer": "स्वागत, तारा निहारने वाले",
+    "dailyHoroscope": "दैनिक राशिफल",
+    "dailyHoroscopeDesc": "आपका व्यक्तिगत दैनिक मार्गदर्शन",
+    "moonPhase": "चांद की कला",
+    "moonPhaseDesc": "वर्तमान चंद्र प्रभाव",
+    "planetaryPositions": "ग्रह स्थितियां",
+    "planetaryPositionsDesc": "वर्तमान आकाशीय संरेखण",
+    "starCharts": "तारा चार्ट",
+    "starChartsDesc": "आपका व्यक्तिगत तारा मानचित्र",
+    "explore": "अन्वेषण करें"
+  },
+  "pages": {
+    "dailyHoroscope": {
+      "title": "दैनिक राशिफल",
+      "subtitle": "जानें कि आज तारे आपके लिए क्या लेकर आए हैं",
+      "selectZodiacSign": "अपनी राशि चुनें",
+      "getHoroscope": "मेरा राशिफल देखें",
+      "horoscopeFor": "राशिफल के लिए"
+    },
+    "moonPhase": {
+      "title": "चांद की कला",
+      "subtitle": "वर्तमान चंद्र चक्र और इसका प्रभाव",
+      "currentPhase": "वर्तमान कला",
+      "influence": "प्रभाव",
+      "nextPhase": "अगली कला"
+    },
+    "planetaryPositions": {
+      "title": "ग्रह स्थितियां",
+      "subtitle": "वर्तमान आकाशीय संरेखण और उनके अर्थ",
+      "planetPositions": "ग्रह स्थितियां",
+      "celestialInsights": "आकाशीय अंतर्दृष्टि"
+    },
+    "starCharts": {
+      "title": "तारा चार्ट",
+      "subtitle": "आपका व्यक्तिगत तारा मानचित्र और जन्म चार्ट",
+      "birthChart": "जन्म चार्ट",
+      "enterDetails": "सटीक चार्ट के लिए अपने जन्म विवरण दर्ज करें",
+      "generateChart": "चार्ट तैयार करें",
+      "birthDate": "जन्म तिथि",
+      "birthTime": "जन्म समय",
+      "birthPlace": "जन्म स्थान"
+    },
+    "payment": {
+      "title": "भुगतान",
+      "subtitle": "अपना सब्सक्रिप्शन प्लान चुनें",
+      "basic": "बेसिक",
+      "premium": "प्रीमियम",
+      "pro": "प्रो",
+      "month": "महीना",
+      "selectPlan": "प्लान चुनें",
+      "currentPlan": "वर्तमान प्लान"
+    }
+  },
+  "zodiacSigns": {
+    "aries": "मेष",
+    "taurus": "वृषभ",
+    "gemini": "मिथुन",
+    "cancer": "कर्क",
+    "leo": "सिंह",
+    "virgo": "कन्या",
+    "libra": "तुला",
+    "scorpio": "वृश्चिक",
+    "sagittarius": "धनु",
+    "capricorn": "मकर",
+    "aquarius": "कुंभ",
+    "pisces": "मीन"
+  }
+}

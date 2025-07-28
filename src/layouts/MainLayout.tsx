@@ -20,22 +20,24 @@ import {
   Settings as SettingsIcon,
 } from '@mui/icons-material';
 import { Outlet, useNavigate } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 
 const drawerWidth = 240;
 
 const MainLayout: React.FC = () => {
   const [mobileOpen, setMobileOpen] = useState(false);
   const navigate = useNavigate();
+  const { t } = useTranslation();
 
   const handleDrawerToggle = () => {
     setMobileOpen(!mobileOpen);
   };
 
   const menuItems = [
-    { text: 'Dashboard', icon: <DashboardIcon />, path: '/' },
-    { text: 'Profile', icon: <AccountIcon />, path: '/profile' },
-    { text: 'Payments', icon: <PaymentIcon />, path: '/payments' },
-    { text: 'Settings', icon: <SettingsIcon />, path: '/settings' },
+    { text: t('navigation.dashboard'), icon: <DashboardIcon />, path: '/' },
+    { text: t('navigation.profile'), icon: <AccountIcon />, path: '/profile' },
+    { text: t('navigation.payments'), icon: <PaymentIcon />, path: '/payments' },
+    { text: t('navigation.settings'), icon: <SettingsIcon />, path: '/settings' },
   ];
 
   const drawer = (

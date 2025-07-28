@@ -17,10 +17,12 @@ import {
 } from '@mui/icons-material';
 import { useAuth } from '../context/AuthContext';
 import { useNavigate } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 
 const Dashboard = () => {
   const { currentUser, signOut } = useAuth();
   const navigate = useNavigate();
+  const { t } = useTranslation();
 
   const handleLogout = async () => {
     try {
@@ -32,10 +34,10 @@ const Dashboard = () => {
   };
 
   const zodiacSigns = [
-    { name: 'Daily Horoscope', icon: <SunIcon />, description: 'Your personalized daily guidance', path: '/daily-horoscope' },
-    { name: 'Moon Phase', icon: <MoonIcon />, description: 'Current lunar influence', path: '/moon-phase' },
-    { name: 'Planetary Positions', icon: <EarthIcon />, description: 'Current celestial alignments', path: '/planetary-positions' },
-    { name: 'Star Charts', icon: <StarsIcon />, description: 'Your personal star map', path: '/star-charts' },
+    { name: t('dashboard.dailyHoroscope'), icon: <SunIcon />, description: t('dashboard.dailyHoroscopeDesc'), path: '/daily-horoscope' },
+    { name: t('dashboard.moonPhase'), icon: <MoonIcon />, description: t('dashboard.moonPhaseDesc'), path: '/moon-phase' },
+    { name: t('dashboard.planetaryPositions'), icon: <EarthIcon />, description: t('dashboard.planetaryPositionsDesc'), path: '/planetary-positions' },
+    { name: t('dashboard.starCharts'), icon: <StarsIcon />, description: t('dashboard.starChartsDesc'), path: '/star-charts' },
   ];
 
   return (
@@ -84,7 +86,7 @@ const Dashboard = () => {
             </Avatar>
             <Box>
               <Typography variant="h4" component="h1" gutterBottom sx={{ color: 'white' }}>
-                Welcome, Stargazer
+                {t('dashboard.welcomeStargazer')}
               </Typography>
               <Typography variant="body1" color="text.secondary">
                 {currentUser?.phoneNumber || currentUser?.email}
@@ -158,7 +160,7 @@ const Dashboard = () => {
                     },
                   }}
                 >
-                  Explore
+                  {t('dashboard.explore')}
                 </Button>
               </CardContent>
             </Card>
