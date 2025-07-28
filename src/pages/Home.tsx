@@ -10,10 +10,12 @@ import {
 } from '@mui/material';
 import { useAuth } from '../context/AuthContext';
 import { useNavigate } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 
 const Home: React.FC = () => {
   const { currentUser, signOut } = useAuth();
   const navigate = useNavigate();
+  const { t } = useTranslation();
 
   const handleSignOut = async () => {
     try {
@@ -42,7 +44,7 @@ const Home: React.FC = () => {
             </Avatar>
             <Box>
               <Typography variant="h4" gutterBottom>
-                Welcome Back!
+                {t('home.welcomeBack')}
               </Typography>
               <Typography variant="body1" color="text.secondary">
                 {currentUser?.email || currentUser?.phoneNumber || 'User'}
@@ -54,24 +56,24 @@ const Home: React.FC = () => {
 
           <Box sx={{ mb: 4 }}>
             <Typography variant="h6" gutterBottom>
-              Account Information
+              {t('home.accountInformation')}
             </Typography>
             <Typography variant="body1">
-              <strong>User ID:</strong> {currentUser?.uid}
+              <strong>{t('home.userID')}:</strong> {currentUser?.uid}
             </Typography>
             {currentUser?.email && (
               <Typography variant="body1">
-                <strong>Email:</strong> {currentUser.email}
+                <strong>{t('common.email')}:</strong> {currentUser.email}
               </Typography>
             )}
             {currentUser?.phoneNumber && (
               <Typography variant="body1">
-                <strong>Phone:</strong> {currentUser.phoneNumber}
+                <strong>{t('common.phone')}:</strong> {currentUser.phoneNumber}
               </Typography>
             )}
             <Typography variant="body1">
-              <strong>Email Verified:</strong>{' '}
-              {currentUser?.emailVerified ? 'Yes' : 'No'}
+              <strong>{t('home.emailVerified')}:</strong>{' '}
+              {currentUser?.emailVerified ? t('auth.yes') : t('auth.no')}
             </Typography>
           </Box>
 
@@ -81,10 +83,10 @@ const Home: React.FC = () => {
               color="primary"
               onClick={() => navigate('/dashboard')}
             >
-              Go to Dashboard
+              {t('home.goToDashboard')}
             </Button>
             <Button variant="outlined" color="error" onClick={handleSignOut}>
-              Sign Out
+              {t('common.signOut')}
             </Button>
           </Box>
         </Paper>

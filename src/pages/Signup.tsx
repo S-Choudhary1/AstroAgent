@@ -12,6 +12,7 @@ import {
 } from '@mui/material';
 import { useAuth } from '../context/AuthContext';
 import { useNavigate } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 
 const Signup: React.FC = () => {
   const [phoneNumber, setPhoneNumber] = useState('');
@@ -22,10 +23,11 @@ const Signup: React.FC = () => {
   const [signupMethod, setSignupMethod] = useState<'phone' | 'email'>('email');
   const { signInWithGoogle, signUpWithEmail } = useAuth();
   const navigate = useNavigate();
+  const { t } = useTranslation();
 
   const handlePhoneSignup = async (e: React.FormEvent) => {
     e.preventDefault();
-    setError('This feature is temporarily unavailable.');
+    setError(t('auth.phoneLoginDisabled'));
   };
 
   const handleEmailSignup = async (e: React.FormEvent) => {
@@ -59,7 +61,7 @@ const Signup: React.FC = () => {
       <Box sx={{ mt: 8, mb: 4 }}>
         <Paper elevation={3} sx={{ p: 4 }}>
           <Typography variant="h4" component="h1" gutterBottom align="center">
-            Create Account
+            {t('auth.signupTitle')}
           </Typography>
 
           {error && (
@@ -69,7 +71,7 @@ const Signup: React.FC = () => {
           )}
 
           <Box sx={{ display: 'flex', gap: 2, mb: 2 }}>
-            <Tooltip title="This feature is temporarily unavailable">
+            <Tooltip title={t('auth.phoneLoginDisabled')}>
               <span style={{ width: '100%' }}>
                 <Button
                   fullWidth
@@ -77,7 +79,7 @@ const Signup: React.FC = () => {
                   onClick={() => setSignupMethod('phone')}
                   disabled
                 >
-                  Phone
+                  {t('common.phone')}
                 </Button>
               </span>
             </Tooltip>
@@ -86,7 +88,7 @@ const Signup: React.FC = () => {
               variant={signupMethod === 'email' ? 'contained' : 'outlined'}
               onClick={() => setSignupMethod('email')}
             >
-              Email
+              {t('common.email')}
             </Button>
           </Box>
 
@@ -94,7 +96,7 @@ const Signup: React.FC = () => {
             <form onSubmit={handlePhoneSignup}>
               <TextField
                 fullWidth
-                label="Phone Number"
+                label={t('common.phoneNumber')}
                 variant="outlined"
                 value={phoneNumber}
                 onChange={(e) => setPhoneNumber(e.target.value)}
@@ -112,14 +114,14 @@ const Signup: React.FC = () => {
                 disabled={true}
                 sx={{ mt: 2 }}
               >
-                Feature Temporarily Unavailable
+                {t('auth.featureUnavailable')}
               </Button>
             </form>
           ) : (
             <form onSubmit={handleEmailSignup}>
               <TextField
                 fullWidth
-                label="Email"
+                label={t('common.email')}
                 type="email"
                 variant="outlined"
                 value={email}
@@ -129,14 +131,14 @@ const Signup: React.FC = () => {
               />
               <TextField
                 fullWidth
-                label="Password"
+                label={t('common.password')}
                 type="password"
                 variant="outlined"
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
                 margin="normal"
                 required
-                helperText="Password must be at least 6 characters long"
+                helperText={t('auth.passwordHelperText')}
               />
               <Button
                 type="submit"
@@ -146,12 +148,12 @@ const Signup: React.FC = () => {
                 disabled={isLoading}
                 sx={{ mt: 2 }}
               >
-                {isLoading ? 'Creating Account...' : 'Sign Up'}
+                {isLoading ? t('auth.signingUp') : t('common.signup')}
               </Button>
             </form>
           )}
 
-          <Divider sx={{ my: 3 }}>OR</Divider>
+          <Divider sx={{ my: 3 }}>{t('common.or')}</Divider>
 
           <Button
             fullWidth
@@ -171,17 +173,17 @@ const Signup: React.FC = () => {
             }}
           >
             <img src="/google.svg" alt="Google" style={{ width: 20, height: 20 }} />
-            Sign up with Google
+            {t('auth.signupWithGoogle')}
           </Button>
 
           <Typography variant="body2" align="center">
-            Already have an account?{' '}
+            {t('auth.alreadyHaveAccount')}{' '}
             <Button
               color="primary"
               onClick={() => navigate('/login')}
               sx={{ textTransform: 'none' }}
             >
-              Login
+              {t('common.login')}
             </Button>
           </Typography>
         </Paper>

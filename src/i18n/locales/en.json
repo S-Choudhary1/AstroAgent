@@ -1,0 +1,133 @@
+{
+  "common": {
+    "loading": "Loading...",
+    "welcome": "Welcome",
+    "login": "Login",
+    "signup": "Sign Up",
+    "logout": "Logout",
+    "signOut": "Sign Out",
+    "email": "Email",
+    "password": "Password",
+    "phone": "Phone",
+    "phoneNumber": "Phone Number",
+    "error": "Error",
+    "success": "Success",
+    "cancel": "Cancel",
+    "save": "Save",
+    "edit": "Edit",
+    "delete": "Delete",
+    "submit": "Submit",
+    "back": "Back",
+    "next": "Next",
+    "previous": "Previous",
+    "close": "Close",
+    "search": "Search",
+    "filter": "Filter",
+    "or": "OR",
+    "and": "AND"
+  },
+  "navigation": {
+    "dashboard": "Dashboard",
+    "profile": "Profile",
+    "payments": "Payments",
+    "settings": "Settings",
+    "home": "Home"
+  },
+  "auth": {
+    "loginTitle": "Login",
+    "signupTitle": "Sign Up",
+    "createAccount": "Create Account",
+    "loginWithGoogle": "Login with Google",
+    "signupWithGoogle": "Sign Up with Google",
+    "dontHaveAccount": "Don't have an account?",
+    "alreadyHaveAccount": "Already have an account?",
+    "forgotPassword": "Forgot Password?",
+    "emailRequired": "Email is required",
+    "passwordRequired": "Password is required",
+    "phoneRequired": "Phone number is required",
+    "loggingIn": "Logging in...",
+    "signingUp": "Signing up...",
+    "creatingAccount": "Creating Account...",
+    "featureUnavailable": "Feature Temporarily Unavailable",
+    "phoneLoginDisabled": "This feature is temporarily unavailable.",
+    "emailVerified": "Email Verified",
+    "passwordHelperText": "Password must be at least 6 characters long",
+    "yes": "Yes",
+    "no": "No"
+  },
+  "home": {
+    "welcomeBack": "Welcome Back!",
+    "accountInformation": "Account Information",
+    "userID": "User ID",
+    "emailVerified": "Email Verified",
+    "goToDashboard": "Go to Dashboard"
+  },
+  "dashboard": {
+    "welcomeStargazer": "Welcome, Stargazer",
+    "dailyHoroscope": "Daily Horoscope",
+    "dailyHoroscopeDesc": "Your personalized daily guidance",
+    "moonPhase": "Moon Phase",
+    "moonPhaseDesc": "Current lunar influence",
+    "planetaryPositions": "Planetary Positions",
+    "planetaryPositionsDesc": "Current celestial alignments",
+    "starCharts": "Star Charts",
+    "starChartsDesc": "Your personal star map",
+    "explore": "Explore"
+  },
+  "pages": {
+    "dailyHoroscope": {
+      "title": "Daily Horoscope",
+      "subtitle": "Discover what the stars have in store for you today",
+      "selectZodiacSign": "Select Your Zodiac Sign",
+      "getHoroscope": "Get My Horoscope",
+      "horoscopeFor": "Horoscope for"
+    },
+    "moonPhase": {
+      "title": "Moon Phase",
+      "subtitle": "Current lunar cycle and its influence",
+      "currentPhase": "Current Phase",
+      "influence": "Influence",
+      "nextPhase": "Next Phase"
+    },
+    "planetaryPositions": {
+      "title": "Planetary Positions",
+      "subtitle": "Current celestial alignments and their meanings",
+      "planetPositions": "Planet Positions",
+      "celestialInsights": "Celestial Insights"
+    },
+    "starCharts": {
+      "title": "Star Charts",
+      "subtitle": "Your personalized star map and birth chart",
+      "birthChart": "Birth Chart",
+      "enterDetails": "Enter your birth details for accurate chart",
+      "generateChart": "Generate Chart",
+      "birthDate": "Birth Date",
+      "birthTime": "Birth Time",
+      "birthPlace": "Birth Place"
+    },
+    "payment": {
+      "title": "Payment",
+      "subtitle": "Choose your subscription plan",
+      "basic": "Basic",
+      "premium": "Premium",
+      "pro": "Pro",
+      "month": "month",
+      "selectPlan": "Select Plan",
+      "currentPlan": "Current Plan"
+    }
+  },
+  "zodiacSigns": {
+    "aries": "Aries",
+    "taurus": "Taurus", 
+    "gemini": "Gemini",
+    "cancer": "Cancer",
+    "leo": "Leo",
+    "virgo": "Virgo",
+    "libra": "Libra",
+    "scorpio": "Scorpio",
+    "sagittarius": "Sagittarius",
+    "capricorn": "Capricorn",
+    "aquarius": "Aquarius",
+    "pisces": "Pisces"
+  }
+}
